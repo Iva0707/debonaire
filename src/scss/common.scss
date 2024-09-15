@@ -14,7 +14,7 @@
     line-height: 1.31; /* 21/16 */
     z-index: 1;
     padding-top: toRem(5);
-    padding-bottom: toRem(5);
+    padding-bottom: toRem(7);
     &::after {
         content: '';
         position: absolute;
@@ -28,10 +28,13 @@
         z-index: -1;
         padding-left: toRem(3);
         padding-right: toRem(3);
+        cursor: pointer;
+        margin-top: toRem(-2);
     }
     &:hover::after {
         height: 100%;
         top: 0;
+        cursor: pointer;
     }
 }
 

@@ -34,6 +34,10 @@
         @media (max-width: $mobile) { 
             .menu-open & {
                 color: $mainColor;
+                &:hover {
+                    color: $white-color;
+                }
+                
             }
         }
     }
@@ -54,6 +58,7 @@
             font-size: toRem(28);
             .menu-open & {
                 color: $mainColor;
+                align-items: flex-start;
             }
         }
     }
