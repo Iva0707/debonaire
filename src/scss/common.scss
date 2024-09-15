@@ -1,1 +1,74 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+[class*='__container'] {
+    @include adaptiveValue ('padding-left', 50, 15);
+    @include adaptiveValue ('padding-right', 50, 15);
+}
+
+.btn {
+    font-weight: 500;
+    letter-spacing: toRem(-0.4);
+    text-align: center;
+    color: $white-color;
+    position: relative;
+    line-height: 1.31; /* 21/16 */
+    z-index: 1;
+    padding-top: toRem(5);
+    padding-bottom: toRem(5);
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $accent-color;
+        height: toRem(2);
+        width: 100%;
+        top: calc(100%);
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: all .3s;
+        z-index: -1;
+        padding-left: toRem(3);
+        padding-right: toRem(3);
+    }
+    &:hover::after {
+        height: 100%;
+        top: 0;
+    }
+}
+
+.title {
+    font-size: toRem(36);
+    letter-spacing: toRem(-1.5);
+    line-height: 1.33; /* 48/36 */
+    color: $white-color;
+    font-family: $font-secondary;
+    @include adaptiveValue ('font-size', 36, 26);
+    &.title-mid {
+        font-size: toRem(40);
+        line-height: 1.2; /* 48/40 */
+        @include adaptiveValue ('font-size', 40, 30);
+    }
+    &.title-big {
+        font-size: toRem(60);
+        line-height: 1.1; /* 66/60 */
+        letter-spacing: toRem(-2.25);
+        @include adaptiveValue ('font-size', 60, 44);
+    }
+}
+
+.subtitle {
+    font-size: toRem(30);
+    letter-spacing: toRem(-1.13);
+    font-family: $font-secondary;
+    color: $white-color;
+    line-height: 1.13; /* 34/30 */
+    @include adaptiveValue ('font-size', 30, 22);
+}
+
+.text {
+    & p {
+        line-height: 1.5; /* 24/16 */
+        &:not(:last-child) {
+            margin-bottom: toEm(20);
+        }
+    }
+}
