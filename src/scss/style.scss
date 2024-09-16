@@ -171,13 +171,21 @@ body {
 
 // Підключення стилів окремих сторінок
 @import "home";
+
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 
 .hero {
-	padding-top: toRem(70);
-	padding-bottom: toRem(120);
-	@include adaptiveValue ('padding-top', 70, 40);
-	@include adaptiveValue ('padding-bottom', 120, 40);
+	padding-top: toRem(100);
+	padding-bottom: toRem(100);
+	min-height: 100svh;
+	display: flex;
+	align-items: center;
+	@include adaptiveValue ('padding-top', 100, 60);
+	@include adaptiveValue ('padding-bottom', 100, 60);
+	// .hero__container
+	&__container {
+		flex-grow: 1;
+	}
 	// .hero__row
 	&__row {
 		display: grid;
@@ -191,6 +199,14 @@ body {
 			grid-template-areas:'text text'
 								'hero round';
 		}
+		@media (max-width: toEm(499.99)) {
+			grid-template-columns: auto;
+			grid-template-rows: auto auto auto;
+			row-gap: toRem(20);
+			grid-template-areas:'text'
+								'hero'
+								'round';
+		}
 	}
 	// .hero__title
 	&__title-item {
@@ -203,9 +219,10 @@ body {
 	}
 	&__title {
 		transform: translate(0, 30%); /* 55/459 */
+		transform: translate(0, 50%); /* 55/459 */
 		opacity: 0;
 		._watcher-view & {
-			transform: translate(0, 11.982571%); /* 55/459 */
+			transform: translate(0, 35.416%); /* 55/459 */
 			opacity: 1;
 			transition: all 1s .1s;
 			@media (max-width: $mobile) {
@@ -259,6 +276,10 @@ body {
 				transition: all 1s 1s;
 			}
 		}
+		@media (max-width: toEm(499.99)) {
+			top: 19.389%;
+			bottom: unset;
+		}
 	}
 	// .hero__deco-two
 	&__deco-two {
@@ -296,10 +317,17 @@ body {
 			}
 		}
 	}
+	// .hero__column
+	&__column {
+		@media (max-width: toEm(499.99)) {
+			display: flex;
+			align-items: center;
+		}
+	}
 	// .hero__picture-round
 	&__picture-round {
-		width: 100%;
-		grid-area: round($number: 0);
+		width: 130%;
+		grid-area: round;
 		& img {
 			transform: translate(-26.748%, 3.292%) scale(0);
 			aspect-ratio: 243 / 243;
@@ -313,11 +341,14 @@ body {
 				transition: all 1s 1s;
 			}
 		}
+		@media (max-width: toEm(499.99)) {
+			flex: 0 0 50%;
+		}
 	}
 	// .hero__text
 	&__text {
 		width: 100%;
-		margin-top: toRem(30);
+		margin-top: toRem(39);
 		margin-left: auto;
 		z-index: -1;
 		position: relative;
@@ -330,8 +361,151 @@ body {
 				transform: translate(0, 0);
 				opacity: 1;
 				transition: all 1s .5s;
+				position: relative;
 				z-index: -1;
 			}
+		}
+		@media (max-width: toEm(499.99)) {
+			margin-top: 0;
+			margin-left: unset;
+		}
+	}
+}
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+.focused {
+	// .focused__row
+	&__row {
+		max-width: toRem(1240);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 25.16% auto 29.43%;
+		column-gap: toRem(80);
+		margin-top: toRem(17);
+		margin-bottom: toRem(35);
+		@include adaptiveValue ('column-gap', 80, 15);
+		@media (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			max-width: 100%;
+			// gap: toRem(30);
+			// @include adaptiveValue ('gap', 30, 15);
+		}
+	}	
+	// .focused__column-one
+	&__column-one {
+		@media (max-width: $mobile) {
+			align-self: flex-end;
+			max-width: 50%;
+			width: 100%;
+		}
+		@media (max-width: toEm(499.99)) {
+			max-width: 100%;
+			align-self: center;
+		}
+	}
+	// .focused__picture
+	&__picture {
+		position: relative;
+	}
+	// .focused__img-one
+	&__img-one {
+		aspect-ratio: 312 / 385;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 3px;
+	}
+	// .focused__deco
+	&__deco {
+		z-index: -1;
+		position: relative;
+	}
+	// .focused__deco-one
+	&__deco-one {
+		position: absolute;
+		width: 111%;
+		bottom: -28.051%;
+		left: -53.205%;
+		z-index: -1;
+		aspect-ratio: 346 / 342;
+		stroke-dashoffset: 1500;
+		stroke-dasharray: 1500;
+		._watcher-view & {
+			transition: all linear 2.5s .2s;
+			stroke-dashoffset: 0;
+		}
+	}
+	// .focused__column-two
+	&__column-two {
+		& div {
+			max-width: toRem(387);
+			@media (max-width: $mobile) {
+				max-width: 100%;
+			}
+		}
+	}
+	// .focused__title-item
+	&__title-item {
+		margin-top: calc(33.333333%);
+		margin-bottom: toRem(20);
+		@media (max-width: $mobile) {
+			margin-top: 0;
+			margin-bottom: toRem(10);
+		}
+	}
+	// .focused__column-three
+	&__column-three {
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: $mobile) {
+			align-self: flex-start;
+			max-width: 50%;
+			width: 100%;
+		}
+		@media (max-width: toEm(499.99)) {
+			max-width: 100%;
+			align-self: center;
+		}
+	}
+	// .focused__picture-two
+	&__picture-two {
+		// justify-self: flex-end;
+		@media (max-width: toEm(499.99)) {
+			width: 100%;
+		}
+	}
+	// .focused__img-two
+	&__img-two {
+		aspect-ratio: 365 / 530;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		transform: translate(0, 24.339%);
+		border-radius: 3px;
+		@media (max-width: $mobile) {
+			transform: translate(0, 0);
+		}
+	}
+	// .focused__deco-two
+	&__deco-two {
+		position: absolute;
+		width: 134.79%;
+		bottom: -15.094%;
+		left: -89.315%;
+		z-index: -1;
+		aspect-ratio: 492 / 369;
+		stroke-dashoffset: 1500;
+		stroke-dasharray: 1500;
+		._watcher-view & {
+			transition: all linear 2.5s .2s;
+			stroke-dashoffset: 0;
+		}
+		@media (max-width: $mobile) {
+			left: 50%;
 		}
 	}
 }
