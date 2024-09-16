@@ -64,6 +64,7 @@
     font-family: $font-secondary;
     color: $white-color;
     line-height: 1.13; /* 34/30 */
+    padding-bottom: 1000px;
     @include adaptiveValue ('font-size', 30, 22);
 }
 

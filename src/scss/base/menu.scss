@@ -9,13 +9,14 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
-			padding: toRem(110) toRem(15) toRem(15) toRem(30);
+			padding: toRem(80) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
+			z-index: 2;
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(90);
+				height: toRem(65);
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;
