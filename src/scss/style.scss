@@ -509,3 +509,139 @@ body {
 		}
 	}
 }
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+.love {
+	background-color: $bg-green-color;
+	padding-top: toRem(150);
+	padding-bottom: toRem(150);
+	@include adaptiveValue ('padding-top', 150, 60);
+	@include adaptiveValue ('padding-bottom', 150, 60);
+
+		// .love__container
+
+		&__container {
+			// max-width: 1391px;
+			display: grid;
+			grid-template-columns: 40.115% 1fr 25.671%;
+			grid-template-rows: auto;
+			column-gap: toRem(10);
+			position: relative;
+		}
+
+		// .love__img-column
+
+		&__img-column {
+			margin-left: toRem(-50);
+			position: relative;
+			@include adaptiveValue("margin-left", -50, -15);
+			& >img {
+				aspect-ratio: 558 / 704;
+				overflow: hidden;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+				box-shadow: 0 4px 4px 0 #00000040;
+				z-index: 1;
+				position: relative;
+			}
+		}
+
+		// .love__deco
+
+		&__deco {
+			position: absolute;
+			right: -20.788%;
+			bottom: -13.352%;
+			transform: rotate(-164deg);
+			z-index: 0;
+			max-width: 39.60%;
+			& img {
+				aspect-ratio: 222 / 232;
+				overflow: hidden;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		// .love__text-column
+
+		&__text-column {
+		}
+
+		// .love__title
+
+		&__title {
+			max-width: toRem(402);
+			margin-top: 33.333%;
+			transform: translate(-18.656%, 0);
+			margin-bottom: toRem(42);
+			z-index: 1;
+			position: relative;
+			@include adaptiveValue("margin-bottom", 42, 20);
+		}
+
+		// .love__text
+
+		&__text {
+			margin-left: toRem(46);
+			margin-right: toRem(10);
+			max-width: toRem(308);
+			@include adaptiveValue("margin-left", 46, 10);
+		}
+
+		// .love__hair-column
+
+		&__hair-column {
+			display: flex;
+			align-items: flex-end;
+			position: relative;
+			& img {
+				align-self: flex-end;
+				margin-top: auto;
+				overflow: hidden;
+				object-fit: cover;
+				aspect-ratio: 338 / 400;
+				border-radius: 3px;
+				transform: translate(0, 52.75%);
+				z-index: 2;
+				width: 100%;
+				margin-right: toRem(32);
+				@include adaptiveValue("margin-right", 32, 10);
+			}
+		}
+
+		// .love__deco-svg
+
+		&__deco-svg {
+			position: absolute;
+			right: -62.14%;
+			bottom: -11.843%;
+			width: 160%;
+			aspect-ratio: 603 / 399;
+
+		}
+
+		// .love__deco-img
+
+		&__deco-img {
+			position: absolute;
+			right: -14.333%;
+			bottom: 11.673%;
+			max-width: 26.66%;
+			width: 100%;
+			& img {
+				aspect-ratio: 400 / 400;
+				overflow: hidden;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+}
+
+
