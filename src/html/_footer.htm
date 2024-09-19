@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer data-watch class="footer">
 	<div class="footer__container">
 		<div class="footer__row">
 			<ul class="footer__column footer__menu-privacy">
@@ -14,5 +14,31 @@
 				<a class="btn btn-big footer__btn" href="#">Apply now</a>
 			</div>
 		</div>
+		<a class="footer__button-top" href="#hero">
+			<svg class="footer__icon" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<line x1="54.2039" y1="6.29986" x2="20.8911" y2="75.223" stroke="#948781" />
+				<circle cx="15.4999" cy="47.5002" r="6.5" fill="#948781" />
+				<path class="footer__arrow" d="M1.1909 39.2502L21.9998 1.04557L42.8088 39.2502H1.1909Z" fill="none"
+					stroke="#948781" />
+			</svg>
+		</a>
 	</div>
 </footer>
+
+<script>
+	document.write('<script src="http://' + (location.host || ' localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>') 
+</script>
+<script>
+	const anchors = document.querySelectorAll('a[href*="#"]');
+	
+	for (let anchor of anchors) {
+	anchor.addEventListener('click', function(e) {
+		e.preventDefault();
+		const blockId = anchor.getAttribute('href').substr(1);
+		document.getElementById(blockId).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		})
+	})
+}
+</script>

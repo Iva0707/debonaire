@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section data-watch class="hero-page hero">
+				<section id="hero" data-watch class="hero-page hero">
 					<div data-prlx-parent class="hero__container">
 						<div class="hero__row">
 							<div data-prlx class="hero__title-item">
@@ -103,18 +103,18 @@
 						</div>
 					</div>
 				</section>
-				<section data-prlx-parent class="services-page services">
+				<section id="menus" data-prlx-parent class="services-page services">
 					<div class="services__container">
 						<h2 data-prlx data-coefficient="4" class="title title-mid services__title">Our Services</h2>
 						<div class="services__row link">
 								<div data-prlx-parent class="link__column link__column-one">
-									<a href="#" class="link__img-item">
+									<a href="index.html" class="link__img-item">
 										<img data-prlx data-coefficient="3" class="link__img link__img-one" src="@img/services/image-1.jpg" alt="Service">
 									</a>
 									<a data-prlx data-coefficient="4" class="subtitle link__subtitle">Cut.</a>
 								</div>
 								<div data-prlx-parent data-watch class="link__column link__column-two">
-									<a href="#" class="link__img-item">
+									<a href="index.html" class="link__img-item">
 										<img data-prlx data-coefficient="3" class="link__img link__img-two" src="@img/services/image-2.jpg" alt="Service">
 									</a>
 									<a data-prlx data-coefficient="4" class="subtitle link__subtitle">Color.</a>
@@ -123,7 +123,7 @@
 									</div>
 								</div>
 								<div data-prlx-parent data-watch class="link__column link__column-three">
-									<a href="#" class="link__img-item">
+									<a href="index.html" class="link__img-item">
 										<img data-prlx data-coefficient="3" class="link__img link__img-three" src="@img/services/image-3.jpg" alt="Service">
 									</a>
 									<a data-prlx data-coefficient="4" class="subtitle link__subtitle">Design.</a>
@@ -134,7 +134,7 @@
 						</div>
 						<div data-prlx-parent data-prlx class="services__content content">
 							<h2 data-prlx data-coefficient="3" class="title title-mid content__title">We create a  customized new look for you.</h2>
-							<a data-prlx class="btn content__btn" href="#">See Our Menu</a>
+							<a data-prlx class="btn content__btn" href="index.html">See Our Menu</a>
 						</div>
 					</div>
 				</section>
@@ -169,33 +169,11 @@
 						<div data-prlx-parent class="best__column-content">		
 							<img data-prlx class="best__content-img" src="@img/best/image-3.jpg" alt="Photo">
 							<h2 data-prlx data-coefficient="3" class="title title-mid best__title">Let’s make you your best self.</h2>
-							<a data-prlx class="btn best__btn" href="#">Book an Appoitment</a>
+							<a data-prlx class="btn best__btn" href="index.html">Book an Appoitment</a>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- <section class="page-markup markup">
-				<div class="markup__container">
-					<h1 class="title">Hi, we are Debonaire. Ready to create an art form on your body.</h1>
-					<h2 class="title title-mid">We’re focused.</h2>
-					<h2 class="title title-big">We love what we do. We are up to the task.</h2>
-					<h3 class="subtitle">We invite you to join our team.</h3>
-					<div class="text">
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-					</div>
-					<div class="text text-white">
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-						<p>Debonaire is natural product-based, hair design & boutique.</p>
-					</div>
-					<a class="btn" href="#">Book an Appoitment</a>
-					<a class="btn btn-big" href="#">Apply now</a>
-				</div>
-			</section> -->
-
-
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{})

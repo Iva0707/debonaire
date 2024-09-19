@@ -2,8 +2,12 @@
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
-    @include adaptiveValue ('padding-top', 100, 40);
-    @include adaptiveValue ('padding-bottom', 100, 40);
+    @include adaptiveValue ('padding-top', 100, 60);
+    @include adaptiveValue ('padding-bottom', 100, 60);
+    // .footer__container 
+    &__container {
+        position: relative;
+    }
     // .footer__row
     &__row {
         max-width: toRem(1218);
@@ -95,6 +99,40 @@
         @media (max-width: toEm(499.99)) {
             text-align: center;
         }
+    }
+    // .footer__button-top
+    &__button-top {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        bottom: -200%;
+        &:hover .footer__icon {
+            transition: .3s;
+            opacity: 0.9;
+        }
+        &:hover .footer__arrow {
+            transform: translate(0, -8px);
+            opacity: 1;
+            transition: .25s;
+            fill: #948781;
+        }
+        ._watcher-view &{
+            transition: all 1s 1s;
+            bottom: -110%;
+            @media (max-width: $mobile) {
+                bottom: -75%;
+            }
+            @media (max-width: toEm(499.99)) {
+                bottom: -22%;
+                right: toRem(-18);
+            }
+		}
+    }
+    // .footer__icon
+    &__icon {
+        width: toRem(75);
+        height: toRem(96);
+        opacity: 0.6;
     }
 }
 
