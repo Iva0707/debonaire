@@ -27,11 +27,28 @@
         z-index: -1;
         cursor: pointer;
         margin-top: toRem(-2);
+        border-radius: 3px;
     }
     &:hover::after {
         height: 100%;
         top: 0;
         cursor: pointer;
+    }
+    &-big {
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: 30px;
+        letter-spacing: toRem(1.13);
+        color: $accent-color;
+        text-transform: capitalize;
+        &::after {
+            height: toRem(3);
+            margin-top: toRem(-3);
+        }
+        &:hover {
+            color: $white-color;
+        }
+
     }
 }
 
@@ -41,6 +58,7 @@
     line-height: 1.33; /* 48/36 */
     color: $white-color;
     font-family: $font-secondary;
+    display: inline-block;
     @include adaptiveValue ('font-size', 36, 26);
     &.title-mid {
         font-size: toRem(40);
@@ -61,6 +79,7 @@
     font-family: $font-secondary;
     color: $white-color;
     line-height: 1.13; /* 34/30 */
+    display: inline-block;
     @include adaptiveValue ('font-size', 30, 22);
 }
 
@@ -69,8 +88,17 @@
         line-height: 1.5; /* 24/16 */
         z-index: 2;
         position: relative;
+        display: inline-block;
         &:not(:last-child) {
-            margin-bottom: toEm(20);
+            margin-bottom: toRem(20);
+        }
+    }
+    &-white {
+        & p {
+            font-weight: 500;
+			line-height: 1.5;
+			letter-spacing: toRem(-0.4);
+			color: $white-color;
         }
     }
 }
