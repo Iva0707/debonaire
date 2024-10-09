@@ -37,7 +37,7 @@
     &-big {
         font-family: $font-secondary;
         font-weight: 400;
-        font-size: 30px;
+        font-size: toRem(30);
         letter-spacing: toRem(1.13);
         color: $accent-color;
         text-transform: capitalize;
