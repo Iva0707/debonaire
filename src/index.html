@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section id="hero" data-watch class="hero-page hero">
+				<section data-watch id="hero" class="hero-page hero">
 					<div data-prlx-parent class="hero__container">
 						<div class="hero__row">
 							<div data-prlx class="hero__title-item">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="focused-page focused">
+				<section data-watch class="focused-page focused">
 					<div class="focused__container">
 						<div data-prlx-parent class="focused__row">
 							<div data-prlx-parent data-watch class="focused__column-one">
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="love-page love">
+				<section data-watch class="love-page love">
 					<div data-prlx-parent class="love__row">
 						<div data-prlx-parent data-watch class="love__img-column">
 							<img data-prlx-parent data-prlx data-coefficient="3" src="@img/love/image-1.jpg" alt="Image">
@@ -103,7 +103,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="menus" data-prlx-parent class="services-page services">
+				<section data-watch id="menus" data-prlx-parent class="services-page services">
 					<div class="services__container">
 						<h2 data-prlx data-coefficient="4" class="title title-mid services__title">Our Services</h2>
 						<div class="services__row link">
@@ -138,7 +138,7 @@
 						</div>
 					</div>
 				</section>
-				<section data-prlx-parent class="passion-page passion">
+				<section data-watch data-prlx-parent class="passion-page passion">
 					<div data-prlx-parent class="passion__container">
 						<h2 data-prlx class="title title-big passion__title">
 							We work with passion.
@@ -150,30 +150,30 @@
 					</div>
 					<img class="passion__bg-image" src="@img/passion/image-1.jpg" alt="Background">
 				</section>
-			</main>
-			<section data-prlx-parent class="best-page best">
-				<div class="best__container">
-					<div class="best__row">
-						<div data-prlx class="best__column-img">
-							<img class="best__img-img" src="@img/best/image-1.jpg" alt="Photo">
-						</div>
-						<div data-prlx-parent data-watch class="best__column-main">
-							<div data-prlx>
-								<img class="best__deco-svg" src="@img/best/deco-2.svg" alt="Decoration">
+				<section data-watch data-prlx-parent class="best-page best">
+					<div class="best__container">
+						<div class="best__row">
+							<div data-prlx class="best__column-img">
+								<img class="best__img-img" src="@img/best/image-1.jpg" alt="Photo">
 							</div>
-							<img data-prlx data-coefficient="3" class="best__main-img" src="@img/best/image-2.jpg" alt="Photo">
-							<div data-prlx>
-								<img class="best__deco-figure" src="@img/best/deco-1.svg" alt="Decoration">
+							<div data-prlx-parent data-watch class="best__column-main">
+								<div data-prlx>
+									<img class="best__deco-svg" src="@img/best/deco-2.svg" alt="Decoration">
+								</div>
+								<img data-prlx data-coefficient="3" class="best__main-img" src="@img/best/image-2.jpg" alt="Photo">
+								<div data-prlx>
+									<img class="best__deco-figure" src="@img/best/deco-1.svg" alt="Decoration">
+								</div>
 							</div>
-						</div>
-						<div data-prlx-parent class="best__column-content">		
-							<img data-prlx class="best__content-img" src="@img/best/image-3.jpg" alt="Photo">
-							<h2 data-prlx data-coefficient="3" class="title title-mid best__title">Let’s make you your best self.</h2>
-							<a data-prlx class="btn best__btn" href="index.html">Book an Appoitment</a>
+							<div data-prlx-parent class="best__column-content">		
+								<img data-prlx class="best__content-img" src="@img/best/image-3.jpg" alt="Photo">
+								<h2 data-prlx data-coefficient="3" class="title title-mid best__title">Let’s make you your best self.</h2>
+								<a data-prlx class="btn best__btn" href="index.html">Book an Appoitment</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</main>
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_js.htm',{})
