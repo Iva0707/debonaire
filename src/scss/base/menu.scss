@@ -2,7 +2,7 @@
 	// .menu__body
 	&__body {
 		@media (max-width: $mobile) {
-			background-color: $white-color;
+			background-color: $color-white;
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -21,7 +21,7 @@
 				top: 0;
 				transition: left 0.3s;
 				z-index: 2;
-				background-color: $white-color;
+				background-color: $color-white;
 			}
 			.menu-open & {
 				left: 0;
@@ -64,7 +64,7 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: $white-color;
+			background-color: $color-white;
 		}
 		&::before {
 			top: 0;
@@ -79,7 +79,7 @@
 			& span,
 			&::before,
 			&::after {
-				background-color: $mainColor;
+				background-color: $color-main;
 			}
 			span {
 				width: 0px;
