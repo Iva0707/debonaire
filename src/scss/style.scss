@@ -38,8 +38,9 @@ $color-violet: #C2B8CC;
 $color-accent: #F95454;
 
 $shadow-dark: 0 4px 4px 0 #00000040;
-$shadow-light: 0 20px 37px 0 #0000000f;
+$shadow-light: 0 10px 37px 0 #0000000f;
 $shadow-main: 0 4px 10px 1px #aaa9a940;
+$shadow-bottom: 4px 9px 10px 1px #aaa9a940;
 
 // Палітра кольорів
 // @import "base/colors-palette";
@@ -896,19 +897,10 @@ body {
 		// .passion__text-bg
 		&__text-bg {
 			position: absolute;
-			font-weight: 700;
-			font-size: toRem(16);
-			letter-spacing: toRem(2);
-			color: $color-white;
-			text-transform: uppercase;
-			top: toRem(-194);
 			right: toRem(167);
 			top: -25.5%;
 			z-index: 1;
-			writing-mode: vertical-lr;
-			@include adaptiveValue ('font-size', 16, 14);
 			@include adaptiveValue ('right', 167, 20);
-			@include adaptiveValue ('letter-spacing', 2, 1);
 		}
 		// .passion__bg-image
 		&__bg-image {

@@ -142,6 +142,7 @@ img {
         z-index: 2;
         position: relative;
         display: inline-block;
+        @include adaptiveValue ('font-size', 16, 14);
         &:not(:last-child) {
             margin-bottom: toRem(20);
         }
@@ -151,12 +152,14 @@ img {
             line-height: 1.25; /* 30/24 */
             display: inline-block;
             font-size: toRem(24);
+            @include adaptiveValue ('font-size', 24, 20);
         }
     }
     &-small {
         & p {
             font-size: toRem(14);
             line-height: 1.14; /* 16/14 */
+            @include adaptiveValue ('font-size', 14, 13);
         }
     }
     &-white {
@@ -170,16 +173,43 @@ img {
         }
     }
     &-decor {
-        font-weight: 700;
-        font-size: toRem(20);
+        font-size: toRem(16);
         letter-spacing: 0.1em;
         text-transform: uppercase;
         line-height: 1;
         writing-mode: vertical-lr;
+        font-weight: 700;
+        @include adaptiveValue ('font-size', 16, 14);
     }
 }
 
-.checkbox_box {
+.input {
+    border-radius: 3px;
+    box-shadow: $shadow-light;
+    background-color: $color-white-light;
+    border: none;
+    font-size: toRem(16);
+    line-height: 1.5;
+    padding: toRem(10) toRem(20);
+    @include adaptiveValue ('font-size', 16, 14);
+    @include adaptiveValue ('padding-left', 20, 14);
+    @include adaptiveValue ('padding-right', 20, 14);
+    @include adaptiveValue ('padding-top', 10, 8);
+    @include adaptiveValue ('padding-bottom', 10, 8);
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: $shadow-main;
+        transition: .2s;
+    }
+}
+
+input {
+    outline: none;
+}
+
+.checkbox_box,
+.radio_box {
     display: flex;
     justify-content: flex-start;
 }
@@ -203,39 +233,21 @@ img {
 [type="checkbox"] + label:before,
 [type="radio"] + label:before {
     content: "";
-    background: url("data:image/svg+xml,%3Csvg width='30' height='35' viewBox='0 0 30 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='5' width='30' height='30' rx='3' fill='white' fill-opacity='0.56' /%3E%3C/svg%3E") no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E%0A") no-repeat;
     min-width: 30px;
-    min-height: 35px;
-    // display: inline-block;
-    // background-color: $color-white-light;
-    // border-radius: 3px;
-    // min-width: 30px;
-    // min-height: 30px;
+    min-height: 33px;
     margin-right: toRem(15);
-    // box-shadow: $shadow-light;
 }
-
-// [type="radio"] + label:before {
-    //     border-radius: 50%;
-    // }
     
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:checked + label:before,
+[type="radio"]:checked + label:before {
     content: "";
-    
-    background: url("data:image/svg+xml,%3Csvg width='30' height='35' viewBox='0 0 30 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='5' width='30' height='30' rx='3' fill='white' fill-opacity='0.56' /%3E%3Cpath d='M4 15.7727C4 15.7727 12.3707 22.4901 15.25 28.5C15.25 28.5 22.1264 2.80419 24.5 2' stroke='%236E645F' stroke-width='1.5' /%3E%3C/svg%3E") no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3Cpath d='M4 14.7727C4 14.7727 12.3707 21.4901 15.25 27.5C15.25 27.5 22.1264 1.80419 24.5 1' stroke='%236E645F' stroke-width='1.5'/%3E%3C/svg%3E%0A") no-repeat;
 }
-// [type="radio"]:checked + label:before {
-//     content: "•";
-//     background: $color-white;
-//     font-size: 40px;
-//     line-height: 18px;
-//     color: $color-main;
-//     text-align: center;
-// }
 
 [type="checkbox"] + label:hover::before,
 [type="radio"] + label:hover::before {
-    box-shadow: $shadow-main;
+    box-shadow: $shadow-bottom;
 }
 // __________ markup __________
 .markup {
