@@ -10,47 +10,59 @@ img {
 }
 
 .btn {
-    font-weight: 500;
-    letter-spacing: toRem(-0.3);
-    text-align: center;
-    color: $color-white;
     position: relative;
-    line-height: 1.31; /* 21/16 */
     z-index: 1;
+
     padding: toRem(5) toRem(3) toRem(7);
+
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: toRem(-0.3);
+    line-height: 1.31; /* 21/16 */
+    color: $color-white;
+
     &::after {
-        content: '';
         position: absolute;
-        background-color: $color-accent;
-        height: toRem(2);
-        width: 100%;
+        content: '';
+        z-index: -1;
         top: calc(100%);
         left: 50%;
-        transform: translate(-50%, 0);
-        transition: all .3s;
-        z-index: -1;
         cursor: pointer;
+        transform: translate(-50%, 0);
+
         margin-top: toRem(-2);
+        height: toRem(2);
+        width: 100%;
+
+        background-color: $color-accent;
+
         border-radius: 3px;
+
+        transition: all .3s;
     }
+
     &:hover::after,
     &:focus::after,
     &:active::after  {
-        height: 100%;
         top: 0;
         cursor: pointer;
+
+        height: 100%;
     }
+
     &-big {
         font-family: $font-secondary;
         font-weight: 400;
         font-size: toRem(30);
+        text-transform: capitalize;
         letter-spacing: toRem(1.13);
         color: $color-accent;
-        text-transform: capitalize;
+
         &::after {
-            height: toRem(3);
             margin-top: toRem(-3);
+            height: toRem(3);
         }
+
         &:hover,
         &:focus,
         &:active {
@@ -61,145 +73,187 @@ img {
 }
 
 .trigger {
+    position: relative;
+
+    padding: toRem(0) toRem(3) toRem(2);
+
+    text-align: center;
     line-height: 1.5;
     color: $color-main;
-    position: relative;
-    padding: toRem(0) toRem(3) toRem(2);
-    text-align: center;
+
     transition: .3s;
+
     &::after,
     &::before {
-        content: '';
         position: absolute;
-        height: toRem(1);
-        width: 100%;
-        top: calc(100%);
-        transition: all .3s;
+        content: '';
+        top: 100%;
         z-index: -1;
         cursor: pointer;
+        
         margin-top: toRem(-2);
+        height: toRem(1);
+        width: 100%;
+        
+        transition: all .3s;
     }
+
     &::after {
-        background-color: transparent;
         left: 50%;
         transform: translate(-50%, 0);
+
+        background-color: transparent;
+
         border-radius: 3px;
     }
+
     &::before {
         background: url("data:image/svg+xml,%3Csvg height='1' viewBox='0 0 127 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='127' y2='0.5' stroke='%236E645F' stroke-dasharray='1 1'/%3E%3C/svg%3E%0A") no-repeat;
     }
+
     &:hover,
     &:focus,
     &:active {
         color: $color-white;
+
         &:after {
-            height: 100%;
             top: 0;
             cursor: pointer;
+
+            height: 100%;
+
             background-color: $color-main;
         }
+
         &::before {
-            transition: opacity .2s;
             opacity: 0;
+
+            transition: opacity .2s;
         }
     }
 }
 
 .title {
+    display: inline-block;
+
+    font-family: $font-secondary;
     font-size: toRem(36);
     letter-spacing: toRem(-1.5);
     line-height: 1.33; /* 48/36 */
     color: $color-white;
-    font-family: $font-secondary;
-    display: inline-block;
+
     @include adaptiveValue ('font-size', 36, 26);
+
     &.title-mid {
         font-size: toRem(40);
         line-height: 1.2; /* 48/40 */
+
         @include adaptiveValue ('font-size', 40, 30);
     }
+
     &.title-big {
         font-size: toRem(60);
         line-height: 1.1; /* 66/60 */
         letter-spacing: toRem(-2.25);
+
         @include adaptiveValue ('font-size', 60, 44);
     }
 }
 
 .subtitle {
+    display: inline-block;
+
+    font-family: $font-secondary;
     font-size: toRem(30);
     letter-spacing: toRem(-1.13);
-    font-family: $font-secondary;
-    color: $color-white;
     line-height: 1.13; /* 34/30 */
-    display: inline-block;
+    color: $color-white;
+
     @include adaptiveValue ('font-size', 30, 22);
 }
 
 .text {
     & p {
-        line-height: 1.5; /* 24/16 */
-        z-index: 2;
         position: relative;
         display: inline-block;
+        z-index: 2;
+
+        line-height: 1.5; /* 24/16 */
+
         @include adaptiveValue ('font-size', 16, 14);
+
         &:not(:last-child) {
             margin-bottom: toRem(20);
         }
     }
+
     &-big {
         & p {
-            line-height: 1.25; /* 30/24 */
             display: inline-block;
+
             font-size: toRem(24);
+            line-height: 1.25; /* 30/24 */
+
             @include adaptiveValue ('font-size', 24, 20);
         }
     }
+
     &-small {
         & p {
             font-size: toRem(14);
             line-height: 1.14; /* 16/14 */
+
             @include adaptiveValue ('font-size', 14, 13);
         }
     }
+
     &-white {
         & p {
 			color: $color-white;
         }
     }
+
     &-black {
         & p {
 			color: $color-main;
         }
     }
+
     &-decor {
         font-size: toRem(16);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        line-height: 1;
-        writing-mode: vertical-lr;
         font-weight: 700;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+
         @include adaptiveValue ('font-size', 16, 14);
     }
 }
 
 .input {
-    border-radius: 3px;
-    box-shadow: $shadow-light;
-    background-color: $color-white-light;
-    border: none;
+    padding: toRem(10) toRem(20);
+
     font-size: toRem(16);
     line-height: 1.5;
-    padding: toRem(10) toRem(20);
+
+    background-color: $color-white-light;
+
+    border-radius: 3px;
+    box-shadow: $shadow-light;
+    border: none;
+
     @include adaptiveValue ('font-size', 16, 14);
     @include adaptiveValue ('padding-left', 20, 14);
     @include adaptiveValue ('padding-right', 20, 14);
     @include adaptiveValue ('padding-top', 10, 8);
     @include adaptiveValue ('padding-bottom', 10, 8);
+
     &:hover,
     &:active,
     &:focus {
         box-shadow: $shadow-main;
+
         transition: .2s;
     }
 }
@@ -221,27 +275,31 @@ input {
 
 [type="checkbox"] + label,
 [type="radio"] + label {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
-    color: $color-main;
+
     line-height: 1.5; /* 24/16 */
-    position: relative;
+    color: $color-main;
 }
 
 [type="checkbox"] + label:before,
 [type="radio"] + label:before {
     content: "";
-    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E%0A") no-repeat;
+
+    margin-right: toRem(15);
     min-width: 30px;
     min-height: 33px;
-    margin-right: toRem(15);
+
+    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E%0A") no-repeat;
 }
     
 [type="checkbox"]:checked + label:before,
 [type="radio"]:checked + label:before {
     content: "";
+
     background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3Cpath d='M4 14.7727C4 14.7727 12.3707 21.4901 15.25 27.5C15.25 27.5 22.1264 1.80419 24.5 1' stroke='%236E645F' stroke-width='1.5'/%3E%3C/svg%3E%0A") no-repeat;
 }
 
@@ -249,79 +307,93 @@ input {
 [type="radio"] + label:hover::before {
     box-shadow: $shadow-bottom;
 }
+
 // __________ markup __________
+
 .markup {
     margin-top: 107px;
     padding: 20px 0;
     
     // .markup__container
-    
     &__container {
             display: flex;
             flex-direction: column;
-            // align-items: flex-start;
             gap: 20px;
 		}
 
 		// .markup__item
-
 		&__item {
             padding: 20px;
+
             border: 1px dashed $color-main;
 		}
 
 		// .markup__title
-
 		&__title {
+            margin-bottom: 20px;
+
             font-size: 30px;
             line-height: 1.4;
+
             border-bottom: 1px dotted $color-main;
-            margin-bottom: 20px;
 		}
 
         // .markup__color-item
-
         &__color-item {
             padding: 5px 20px;
+
             border-radius: 3px;
             box-shadow: $shadow-main;
+
             &:not(:last-child) {
                 margin-bottom: toRem(10);
             }
         }
+
         &__color-item--1 {
             background-color: $color-main;
         }
+
         &__color-item--2 {
             background-color: $color-white;
         }
+
         &__color-item--3 {
             background-color: $color-accent;
         }
+
         &__color-item--4 {
             background-color: $color-pink;
         }
+
         &__color-item--5 {
             background-color: $color-green;
         }
+
         &__color-item--6 {
             background-color: $color-violet;
         }
+
         &__color-item--7 {
             background-color: $color-blue;
-        }          
+        }   
+
         &__color-item--8 {
             background-color: $color-green-dark;
         }
+
         &__color-item--9 {
             background-color: $color-grey;
         } 
+
         &__color-item--10 {
             background-color: $color-blue-dark;
         }
+
         &__color-item--11 {
             background-color: $color-grey-light;
         }
+        
         &__color-item--12 {
             background-color: $color-white-light;
         }

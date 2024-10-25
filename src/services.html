@@ -7,16 +7,16 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
             <main class="services-page">
-                <section class="services-hero">
-					<div class="services-hero__container">
+                <section data-watch class="services-hero">
+					<div data-prlx-parent class="services-hero__container">
 						<div class="services-hero__content">
-							<h1 class="title services-hero__title">
+							<h1 data-prlx data-coefficient="4" data-prlx class="title services-hero__title">
 								Unveil your natural beauty with us.
 							</h1>
-							<div class="text text-white services-hero__text">
+							<div data-prlx data-coefficient="3" class="text text-white services-hero__text">
 								<p>Every day is a new chance for us to inspire you through the art of hair. We turn your hair into a work of art.</p>
 							</div>
-							<a href="#" class="btn services-hero__btn">Book an Appoitment</a>
+							<a data-prlx data-coefficient="2" href="#" class="btn services-hero__btn">Book an Appoitment</a>
 						</div>
 					</div>
 					<div class="services-hero__img-box">
@@ -29,3 +29,61 @@
 		@@include('html/_js.htm',{})
 	</body>
 </html>
+
+
+Порядок написання стилів
+
+
+Позиціювання та відображення:
+display
+position
+top, right, bottom, left
+float
+clear
+z-index
+transform
+opacity
+cursor
+content
+
+Блочна модель (внутрішні/зовнішні відступи, розміри):
+margin
+padding
+width, height
+max-width, max-height
+min-width, min-height
+box-sizing
+object-fit
+aspect-ratio
+overflow
+
+Текст та шрифти:
+font
+font-size
+font-weight
+font-style
+line-height
+letter-spacing
+text-align
+text-transform
+text-decoration
+writing-mode
+color
+
+Фон:
+background
+background-color
+background-image
+background-position
+background-size
+background-repeat
+
+Межі та тіні:
+border
+border-radius
+box-shadow
+
+Анімації та переходи:
+transition
+animation
+
