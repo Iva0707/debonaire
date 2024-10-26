@@ -1316,7 +1316,7 @@ body {
 
 		@include adaptiveValue ('padding-top', 107, 60);
 
-		// .services-hero__container		
+		// .services-hero__container
 		&__container {
 			display: flex;
 			flex-direction: column;
@@ -1366,10 +1366,6 @@ body {
 			}
 		}
 
-		// .services-hero__btn
-		&__btn {
-		}
-
 		// .services-hero__img-box
 		&__img-box {
 			position: absolute;
@@ -1394,6 +1390,121 @@ body {
 			@media (max-width: $tablet) {
 				object-position: 60% 50%;
 			}
-		}	
+		}
 	}
+	// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+	.services-creating {
+		padding: 115px 0;
+
+		@include adaptiveValue ('padding-top', 115, 60);
+		@include adaptiveValue ('padding-bottom', 115, 60);
+
+
+	
+		// .services-creating__container
+		&__container {
+		
+		}
+
+
+		// .services-creating__row
+
+
+		&__row {
+			display: grid;
+			grid-template-columns: 33% 22% 1fr;
+			grid-template-rows: auto;
+			gap: 54px;
+		
+		}
+
+
+		// .services-creating__column-photo
+
+
+		&__column-photo {
+		
+		}
+
+
+		// .services-creating__image-main
+
+
+		&__image-main {
+			aspect-ratio: 476 / 805;
+			object-fit: contain;
+			width: 100%;
+			height: auto;
+		
+		}
+
+
+		// .services-creating__deco-main
+
+
+		&__deco-main {
+		
+		}
+
+
+		// .services-creating__column-content
+
+
+		&__column-content {
+		
+		}
+
+
+		// .services-creating__title
+
+
+		&__title {
+		
+		}
+
+
+		// .services-creating__text
+
+
+		&__text {
+		
+		}
+
+
+		// .services-creating__column-deco
+
+
+		&__column-deco {
+		
+		}
+
+
+		// .services-creating__text-deco
+
+
+		&__text-deco {
+			writing-mode: unset;
+			text-align: end;
+		
+		}
+
+
+		// .services-creating__image-deco
+
+
+		&__image-deco {
+			position: absolute;
+		
+		}
+
+
+		// .services-creating__image-round
+
+
+		&__image-round {
+		
+		}
+	}
+
 }

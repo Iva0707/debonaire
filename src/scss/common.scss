@@ -1,400 +1,402 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
-[class*='__container'] {
-    @include adaptiveValue ('padding-left', 50, 15);
-    @include adaptiveValue ('padding-right', 50, 15);
+[class*="__container"] {
+  @include adaptiveValue("padding-left", 50, 15);
+  @include adaptiveValue("padding-right", 50, 15);
 }
 
 img {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .btn {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    padding: toRem(5) toRem(3) toRem(7);
+  padding: toRem(5) toRem(3) toRem(7);
 
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: toRem(-0.3);
-    line-height: 1.31; /* 21/16 */
-    color: $color-white;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: toRem(-0.3);
+  line-height: 1.31; /* 21/16 */
+  color: $color-white;
 
-    &::after {
-        position: absolute;
-        content: '';
-        z-index: -1;
-        top: calc(100%);
-        left: 50%;
-        cursor: pointer;
-        transform: translate(-50%, 0);
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: calc(100%);
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, 0);
 
-        margin-top: toRem(-2);
-        height: toRem(2);
-        width: 100%;
+    margin-top: toRem(-2);
+    height: toRem(2);
+    width: 100%;
 
-        background-color: $color-accent;
+    background-color: $color-accent;
 
-        border-radius: 3px;
+    border-radius: 3px;
 
-        transition: all .3s;
-    }
+    transition: all 0.3s;
+  }
 
-    &:hover::after,
-    &:focus::after,
-    &:active::after  {
-        top: 0;
-        cursor: pointer;
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    top: 0;
+    cursor: pointer;
 
-        height: 100%;
-    }
+    height: 100%;
+  }
 
-    &-big {
-        font-family: $font-secondary;
-        font-weight: 400;
-        font-size: toRem(30);
-        text-transform: capitalize;
-        letter-spacing: toRem(1.13);
-        color: $color-accent;
-
-        &::after {
-            margin-top: toRem(-3);
-            height: toRem(3);
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $color-white;
-        }
-
-    }
-}
-
-.trigger {
-    position: relative;
-
-    padding: toRem(0) toRem(3) toRem(2);
-
-    text-align: center;
-    line-height: 1.5;
-    color: $color-main;
-
-    transition: .3s;
-
-    &::after,
-    &::before {
-        position: absolute;
-        content: '';
-        top: 100%;
-        z-index: -1;
-        cursor: pointer;
-        
-        margin-top: toRem(-2);
-        height: toRem(1);
-        width: 100%;
-        
-        transition: all .3s;
-    }
+  &-big {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: toRem(30);
+    text-transform: capitalize;
+    letter-spacing: toRem(1.13);
+    color: $color-accent;
 
     &::after {
-        left: 50%;
-        transform: translate(-50%, 0);
-
-        background-color: transparent;
-
-        border-radius: 3px;
-    }
-
-    &::before {
-        background: url("data:image/svg+xml,%3Csvg height='1' viewBox='0 0 127 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='127' y2='0.5' stroke='%236E645F' stroke-dasharray='1 1'/%3E%3C/svg%3E%0A") no-repeat;
+      margin-top: toRem(-3);
+      height: toRem(3);
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: $color-white;
-
-        &:after {
-            top: 0;
-            cursor: pointer;
-
-            height: 100%;
-
-            background-color: $color-main;
-        }
-
-        &::before {
-            opacity: 0;
-
-            transition: opacity .2s;
-        }
+      color: $color-white;
     }
+  }
+}
+
+.trigger {
+  position: relative;
+
+  padding: toRem(0) toRem(3) toRem(2);
+
+  text-align: center;
+  line-height: 1.5;
+  color: $color-main;
+
+  transition: 0.3s;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    z-index: -1;
+    cursor: pointer;
+
+    margin-top: toRem(-2);
+    height: toRem(1);
+    width: 100%;
+
+    transition: all 0.3s;
+  }
+
+  &::after {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-color: transparent;
+
+    border-radius: 3px;
+  }
+
+  &::before {
+    background: url("data:image/svg+xml,%3Csvg height='1' viewBox='0 0 127 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='127' y2='0.5' stroke='%236E645F' stroke-dasharray='1 1'/%3E%3C/svg%3E%0A")
+      no-repeat;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+
+    &:after {
+      top: 0;
+      cursor: pointer;
+
+      height: 100%;
+
+      background-color: $color-main;
+    }
+
+    &::before {
+      opacity: 0;
+
+      transition: opacity 0.2s;
+    }
+  }
 }
 
 .title {
-    display: inline-block;
+  display: inline-block;
 
-    font-family: $font-secondary;
-    font-size: toRem(36);
-    letter-spacing: toRem(-1.5);
-    line-height: 1.33; /* 48/36 */
-    color: $color-white;
+  font-family: $font-secondary;
+  font-size: toRem(36);
+  letter-spacing: toRem(-1.5);
+  line-height: 1.33; /* 48/36 */
+  color: $color-white;
 
-    @include adaptiveValue ('font-size', 36, 26);
+  @include adaptiveValue("font-size", 36, 26);
 
-    &.title-mid {
-        font-size: toRem(40);
-        line-height: 1.2; /* 48/40 */
+  &.title-mid {
+    font-size: toRem(40);
+    line-height: 1.2; /* 48/40 */
 
-        @include adaptiveValue ('font-size', 40, 30);
-    }
+    @include adaptiveValue("font-size", 40, 30);
+  }
 
-    &.title-big {
-        font-size: toRem(60);
-        line-height: 1.1; /* 66/60 */
-        letter-spacing: toRem(-2.25);
+  &.title-big {
+    font-size: toRem(60);
+    line-height: 1.1; /* 66/60 */
+    letter-spacing: toRem(-2.25);
 
-        @include adaptiveValue ('font-size', 60, 44);
-    }
+    @include adaptiveValue("font-size", 60, 44);
+  }
 }
 
 .subtitle {
-    display: inline-block;
+  display: inline-block;
 
-    font-family: $font-secondary;
-    font-size: toRem(30);
-    letter-spacing: toRem(-1.13);
-    line-height: 1.13; /* 34/30 */
-    color: $color-white;
+  font-family: $font-secondary;
+  font-size: toRem(30);
+  letter-spacing: toRem(-1.13);
+  line-height: 1.13; /* 34/30 */
+  color: $color-white;
 
-    @include adaptiveValue ('font-size', 30, 22);
+  @include adaptiveValue("font-size", 30, 22);
 }
 
 .text {
+  & p {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+
+    line-height: 1.5; /* 24/16 */
+
+    @include adaptiveValue("font-size", 16, 14);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+
+  &-big {
     & p {
-        position: relative;
-        display: inline-block;
-        z-index: 2;
+      display: inline-block;
 
-        line-height: 1.5; /* 24/16 */
+      font-size: toRem(24);
+      line-height: 1.25; /* 30/24 */
 
-        @include adaptiveValue ('font-size', 16, 14);
-
-        &:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
+      @include adaptiveValue("font-size", 24, 20);
     }
+  }
 
-    &-big {
-        & p {
-            display: inline-block;
+  &-small {
+    & p {
+      font-size: toRem(14);
+      line-height: 1.14; /* 16/14 */
 
-            font-size: toRem(24);
-            line-height: 1.25; /* 30/24 */
-
-            @include adaptiveValue ('font-size', 24, 20);
-        }
+      @include adaptiveValue("font-size", 14, 13);
     }
+  }
 
-    &-small {
-        & p {
-            font-size: toRem(14);
-            line-height: 1.14; /* 16/14 */
-
-            @include adaptiveValue ('font-size', 14, 13);
-        }
+  &-white {
+    & p {
+      color: $color-white;
     }
+  }
 
-    &-white {
-        & p {
-			color: $color-white;
-        }
+  &-black {
+    & p {
+      color: $color-main;
     }
+  }
 
-    &-black {
-        & p {
-			color: $color-main;
-        }
-    }
+  &-decor {
+    font-size: toRem(16);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
 
-    &-decor {
-        font-size: toRem(16);
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        line-height: 1;
-        text-transform: uppercase;
-        writing-mode: vertical-lr;
-
-        @include adaptiveValue ('font-size', 16, 14);
-    }
+    @include adaptiveValue("font-size", 16, 14);
+  }
 }
 
 .input {
-    padding: toRem(10) toRem(20);
+  padding: toRem(10) toRem(20);
 
-    font-size: toRem(16);
-    line-height: 1.5;
+  font-size: toRem(16);
+  line-height: 1.5;
 
-    background-color: $color-white-light;
+  background-color: $color-white-light;
 
-    border-radius: 3px;
-    box-shadow: $shadow-light;
-    border: none;
+  border-radius: 3px;
+  box-shadow: $shadow-light;
+  border: none;
 
-    @include adaptiveValue ('font-size', 16, 14);
-    @include adaptiveValue ('padding-left', 20, 14);
-    @include adaptiveValue ('padding-right', 20, 14);
-    @include adaptiveValue ('padding-top', 10, 8);
-    @include adaptiveValue ('padding-bottom', 10, 8);
+  @include adaptiveValue("font-size", 16, 14);
+  @include adaptiveValue("padding-left", 20, 14);
+  @include adaptiveValue("padding-right", 20, 14);
+  @include adaptiveValue("padding-top", 10, 8);
+  @include adaptiveValue("padding-bottom", 10, 8);
 
-    &:hover,
-    &:active,
-    &:focus {
-        box-shadow: $shadow-main;
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: $shadow-main;
 
-        transition: .2s;
-    }
+    transition: 0.2s;
+  }
 }
 
 input {
-    outline: none;
+  outline: none;
 }
 
 .checkbox_box,
 .radio_box {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 [type="checkbox"],
 [type="radio"] {
-    display: none;
+  display: none;
 }
 
 [type="checkbox"] + label,
 [type="radio"] + label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
 
-    line-height: 1.5; /* 24/16 */
-    color: $color-main;
+  line-height: 1.5; /* 24/16 */
+  color: $color-main;
 }
 
 [type="checkbox"] + label:before,
 [type="radio"] + label:before {
-    content: "";
+  content: "";
 
-    margin-right: toRem(15);
-    min-width: 30px;
-    min-height: 33px;
+  margin-right: toRem(15);
+  min-width: 30px;
+  min-height: 33px;
 
-    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E%0A") no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3C/svg%3E%0A")
+    no-repeat;
 }
-    
+
 [type="checkbox"]:checked + label:before,
 [type="radio"]:checked + label:before {
-    content: "";
+  content: "";
 
-    background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3Cpath d='M4 14.7727C4 14.7727 12.3707 21.4901 15.25 27.5C15.25 27.5 22.1264 1.80419 24.5 1' stroke='%236E645F' stroke-width='1.5'/%3E%3C/svg%3E%0A") no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3Cpath d='M4 14.7727C4 14.7727 12.3707 21.4901 15.25 27.5C15.25 27.5 22.1264 1.80419 24.5 1' stroke='%236E645F' stroke-width='1.5'/%3E%3C/svg%3E%0A")
+    no-repeat;
 }
 
 [type="checkbox"] + label:hover::before,
 [type="radio"] + label:hover::before {
-    box-shadow: $shadow-bottom;
+  box-shadow: $shadow-bottom;
 }
 
 // __________ markup __________
 
 .markup {
-    margin-top: 107px;
-    padding: 20px 0;
-    
-    // .markup__container
-    &__container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-		}
+  margin-top: 107px;
+  padding: 20px 0;
 
-		// .markup__item
-		&__item {
-            padding: 20px;
+  // .markup__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-            border: 1px dashed $color-main;
-		}
+  // .markup__item
+  &__item {
+    padding: 20px;
 
-		// .markup__title
-		&__title {
-            margin-bottom: 20px;
+    border: 1px dashed $color-main;
+  }
 
-            font-size: 30px;
-            line-height: 1.4;
+  // .markup__title
+  &__title {
+    margin-bottom: 20px;
 
-            border-bottom: 1px dotted $color-main;
-		}
+    font-size: 30px;
+    line-height: 1.4;
 
-        // .markup__color-item
-        &__color-item {
-            padding: 5px 20px;
+    border-bottom: 1px dotted $color-main;
+  }
 
-            border-radius: 3px;
-            box-shadow: $shadow-main;
+  // .markup__color-item
+  &__color-item {
+    padding: 5px 20px;
 
-            &:not(:last-child) {
-                margin-bottom: toRem(10);
-            }
-        }
+    border-radius: 3px;
+    box-shadow: $shadow-main;
 
-        &__color-item--1 {
-            background-color: $color-main;
-        }
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
 
-        &__color-item--2 {
-            background-color: $color-white;
-        }
+  &__color-item--1 {
+    background-color: $color-main;
+  }
 
-        &__color-item--3 {
-            background-color: $color-accent;
-        }
+  &__color-item--2 {
+    background-color: $color-white;
+  }
 
-        &__color-item--4 {
-            background-color: $color-pink;
-        }
+  &__color-item--3 {
+    background-color: $color-accent;
+  }
 
-        &__color-item--5 {
-            background-color: $color-green;
-        }
+  &__color-item--4 {
+    background-color: $color-pink;
+  }
 
-        &__color-item--6 {
-            background-color: $color-violet;
-        }
+  &__color-item--5 {
+    background-color: $color-green;
+  }
 
-        &__color-item--7 {
-            background-color: $color-blue;
-        }   
+  &__color-item--6 {
+    background-color: $color-violet;
+  }
 
-        &__color-item--8 {
-            background-color: $color-green-dark;
-        }
+  &__color-item--7 {
+    background-color: $color-blue;
+  }
 
-        &__color-item--9 {
-            background-color: $color-grey;
-        } 
+  &__color-item--8 {
+    background-color: $color-green-dark;
+  }
 
-        &__color-item--10 {
-            background-color: $color-blue-dark;
-        }
+  &__color-item--9 {
+    background-color: $color-grey;
+  }
 
-        &__color-item--11 {
-            background-color: $color-grey-light;
-        }
-        
-        &__color-item--12 {
-            background-color: $color-white-light;
-        }
+  &__color-item--10 {
+    background-color: $color-blue-dark;
+  }
+
+  &__color-item--11 {
+    background-color: $color-grey-light;
+  }
+
+  &__color-item--12 {
+    background-color: $color-white-light;
+  }
 }
