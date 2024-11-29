@@ -1,58 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-            <main class="services-page">
-							
-                <section data-watch class="services-hero">
-					<div data-prlx-parent class="services-hero__container">
-						<div class="services-hero__content">
-							<h1 data-prlx data-coefficient="4" data-prlx class="title services-hero__title">
-								Unveil your natural beauty with us.
-							</h1>
-							<div data-prlx data-coefficient="3" class="text text-white services-hero__text">
-								<p>Every day is a new chance for us to inspire you through the art of hair. We turn your hair into a work of art.</p>
-							</div>
-							<a data-prlx data-coefficient="2" href="#" class="btn services-hero__btn">Book an Appoitment</a>
-						</div>
-					</div>
-					<div class="services-hero__img-box">
-						<img src="@img/services-hero/image-1.jpg" alt="Background" class="services-hero__background">
-					</div>
-                </section>
-				<section class="services-creating">
-					<div class="services-creating__container">
-						<div class="services-creating__row">
-							<div class="services-creating__column-photo">
-								<img class="services-creating__image-main" src="@img/services-creating/image-1.jpg" alt="Photo">
-								<img class="services-creating__deco-main" src="@img/services-creating/deco-1.svg" alt="Deco">
-							</div>
-							<div class="services-creating__column-content">
-								<h2 class="title title-big services-creating__title">
-									Creating art with your hair.
-								</h2>
-								<div class="text services-creating__text">
-									<p>We craft personalized styles that reflect your personality and lifestyle. Our services are more than just hair care.</p>
-									<p>We believe every service we offer is an opportunity to highlight your uniqueness. Our stylists work with you to create a look that perfectly suits you and reflects your personal style.</p>
-								</div>
-							</div>
-							<div class="services-creating__column-deco">
-								<div class="text text-decor text-white services-creating__text-deco">
-									<p>Style, made just for you.</p>
-								</div>
-								<img class="services-creating__image-deco" src="@img/services-creating/image-2.jpg" alt="Deco">
-								<img class="services-creating__image-round" src="@img/services-creating/deco-2.jpg" alt="Photo">
-							</div>
-						</div>
-					</div>
-				</section>
-            </main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"HomePage" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="services-page">
+        <section data-watch class="services-hero">
+          <div data-prlx-parent class="services-hero__container">
+            <div class="services-hero__content">
+              <h1 data-prlx data-coefficient="4" data-prlx class="title services-hero__title">
+                Unveil your natural beauty with us.
+              </h1>
+              <div data-prlx data-coefficient="3" class="text text-white services-hero__text">
+                <p>
+                  Every day is a new chance for us to inspire you through the art of hair. We turn your hair into a work
+                  of art.
+                </p>
+              </div>
+              <a data-prlx data-coefficient="2" href="#" class="btn services-hero__btn">Book an Appoitment</a>
+            </div>
+          </div>
+          <div class="services-hero__img-box">
+            <img src="@img/services-hero/image-1.jpg" alt="Background" class="services-hero__background" />
+          </div>
+        </section>
+
+        <section data-watch class="services-creating">
+          <div class="services-creating__container">
+            <div class="services-creating__row">
+              <div class="services-creating__column-photo">
+                <img class="services-creating__image-main" src="@img/services-creating/image-1.jpg" alt="Photo" />
+                <img class="services-creating__deco-main" src="@img/services-creating/deco-1.svg" alt="Deco" />
+              </div>
+              <div class="services-creating__column-content">
+                <h2 class="title title-big services-creating__title">Creating art with your hair.</h2>
+                <div class="text services-creating__text">
+                  <p>
+                    We craft personalized styles that reflect your personality and lifestyle. Our services are more than
+                    just hair care.
+                  </p>
+                  <p>
+                    We believe every service we offer is an opportunity to highlight your uniqueness. Our stylists work
+                    with you to create a look that perfectly suits you and reflects your personal style.
+                  </p>
+                </div>
+              </div>
+              <div class="services-creating__column-deco">
+                <div class="text text-decor text-white services-creating__text-deco">
+                  <p>Style, made just for you.</p>
+                </div>
+                <img class="services-creating__image-deco" src="@img/services-creating/image-2.jpg" alt="Deco" />
+                <img class="services-creating__image-round" src="@img/services-creating/deco-2.jpg" alt="Photo" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>
