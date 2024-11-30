@@ -1375,7 +1375,7 @@ body {
   // ============================================================================================================================================================================================================================================================================================================================================================================================
 
   .services-creating {
-    padding: 200px 0;
+    padding: toRem(200) 0;
 
     @include adaptiveValue('padding-top', 200, 60);
     @include adaptiveValue('padding-bottom', 200, 60);
@@ -1401,7 +1401,7 @@ body {
       display: grid;
       grid-template-columns: 33% 21% 1fr;
       grid-template-rows: auto;
-      gap: 54px;
+      gap: toRem(54);
 
       @include adaptiveValue('gap', 54, 10);
 
@@ -1415,7 +1415,7 @@ body {
           'content deco';
         grid-template-columns: 1fr 20%;
         grid-template-rows: repeat(2, auto);
-        row-gap: 80px;
+        row-gap: toRem(80);
 
         @include adaptiveValue('row-gap', 80, 20);
       }
@@ -1465,8 +1465,8 @@ body {
       z-index: -1;
 
       width: 100%;
-      max-width: 223px;
-      
+      max-width: toRem(223);
+
       & img {
         transform: rotate(0deg) scale(0);
       }
@@ -1485,11 +1485,11 @@ body {
       justify-content: flex-end;
       flex-direction: column;
       align-items: flex-end;
-      gap: 42px;
+      gap: toRem(42);
 
-      padding-bottom: 119px;
+      padding-bottom: toRem(120);
 
-      @include adaptiveValue('padding-bottom', 119, 40);
+      @include adaptiveValue('padding-bottom', 120, 40);
       @include adaptiveValue('gap', 42, 10);
 
       @media (max-width: $tablet) {
@@ -1506,9 +1506,9 @@ body {
     &__title {
       z-index: 1;
 
-      margin-left: -100px;
-      margin-right: 51px;
-      min-width: 382px;
+      margin-left: toRem(-100);
+      margin-right: toRem(51);
+      min-width: toRem(382);
 
       @media (max-width: $tablet) {
         margin: 0;
@@ -1562,7 +1562,7 @@ body {
       bottom: -14%;
 
       width: 100%;
-      max-width: 229px;
+      max-width: toRem(229);
 
       aspect-ratio: 229 / 625;
 
@@ -1570,7 +1570,7 @@ body {
 
       @media (max-width: $tablet) {
         bottom: 0;
-        right: -5px;
+        right: toRem(-5);
 
         @include adaptiveValue('right', -5, -50, 0, 767.98, 479.98);
       }
@@ -1588,8 +1588,8 @@ body {
       bottom: -19%;
 
       width: 100%;
-      max-width: 341px;
-      min-width: 110px;
+      max-width: toRem(341);
+      min-width: toRem(110);
 
       border: 2px solid $color-white;
       border-radius: 50%;
@@ -1605,8 +1605,8 @@ body {
 
       @media (max-width: $mobileSmall) {
         right: 0;
-        min-width: 150px;
-        bottom: -20%;
+        min-width: toRem(150);
+        bottom: -18%;
       }
     }
   }

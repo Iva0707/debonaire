@@ -1,8 +1,8 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
-[class*="__container"] {
-  @include adaptiveValue("padding-left", 50, 15);
-  @include adaptiveValue("padding-right", 50, 15);
+[class*='__container'] {
+  @include adaptiveValue('padding-left', 50, 15);
+  @include adaptiveValue('padding-right', 50, 15);
 }
 
 img {
@@ -23,7 +23,7 @@ img {
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     z-index: -1;
     top: calc(100%);
     left: 50%;
@@ -85,7 +85,7 @@ img {
   &::after,
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 100%;
     z-index: -1;
     cursor: pointer;
@@ -142,13 +142,13 @@ img {
   line-height: 1.33; /* 48/36 */
   color: $color-white;
 
-  @include adaptiveValue("font-size", 36, 26);
+  @include adaptiveValue('font-size', 36, 26);
 
   &.title-mid {
     font-size: toRem(40);
     line-height: 1.2; /* 48/40 */
 
-    @include adaptiveValue("font-size", 40, 30);
+    @include adaptiveValue('font-size', 40, 30);
   }
 
   &.title-big {
@@ -156,7 +156,7 @@ img {
     line-height: 1.1; /* 66/60 */
     letter-spacing: toRem(-2.25);
 
-    @include adaptiveValue("font-size", 60, 44);
+    @include adaptiveValue('font-size', 60, 44);
   }
 }
 
@@ -169,7 +169,7 @@ img {
   line-height: 1.13; /* 34/30 */
   color: $color-white;
 
-  @include adaptiveValue("font-size", 30, 22);
+  @include adaptiveValue('font-size', 30, 22);
 }
 
 .text {
@@ -180,7 +180,7 @@ img {
 
     line-height: 1.5; /* 24/16 */
 
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue('font-size', 16, 14);
 
     &:not(:last-child) {
       margin-bottom: toRem(20);
@@ -194,7 +194,7 @@ img {
       font-size: toRem(24);
       line-height: 1.25; /* 30/24 */
 
-      @include adaptiveValue("font-size", 24, 20);
+      @include adaptiveValue('font-size', 24, 20);
     }
   }
 
@@ -203,7 +203,7 @@ img {
       font-size: toRem(14);
       line-height: 1.14; /* 16/14 */
 
-      @include adaptiveValue("font-size", 14, 13);
+      @include adaptiveValue('font-size', 14, 13);
     }
   }
 
@@ -227,7 +227,7 @@ img {
     text-transform: uppercase;
     writing-mode: vertical-lr;
 
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue('font-size', 16, 14);
   }
 }
 
@@ -243,11 +243,11 @@ img {
   box-shadow: $shadow-light;
   border: none;
 
-  @include adaptiveValue("font-size", 16, 14);
-  @include adaptiveValue("padding-left", 20, 14);
-  @include adaptiveValue("padding-right", 20, 14);
-  @include adaptiveValue("padding-top", 10, 8);
-  @include adaptiveValue("padding-bottom", 10, 8);
+  @include adaptiveValue('font-size', 16, 14);
+  @include adaptiveValue('padding-left', 20, 14);
+  @include adaptiveValue('padding-right', 20, 14);
+  @include adaptiveValue('padding-top', 10, 8);
+  @include adaptiveValue('padding-bottom', 10, 8);
 
   &:hover,
   &:active,
@@ -268,13 +268,13 @@ input {
   justify-content: flex-start;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   display: none;
 }
 
-[type="checkbox"] + label,
-[type="radio"] + label {
+[type='checkbox'] + label,
+[type='radio'] + label {
   position: relative;
   display: flex;
   align-items: center;
@@ -285,9 +285,9 @@ input {
   color: $color-main;
 }
 
-[type="checkbox"] + label:before,
-[type="radio"] + label:before {
-  content: "";
+[type='checkbox'] + label:before,
+[type='radio'] + label:before {
+  content: '';
 
   margin-right: toRem(15);
   min-width: 30px;
@@ -297,17 +297,42 @@ input {
     no-repeat;
 }
 
-[type="checkbox"]:checked + label:before,
-[type="radio"]:checked + label:before {
-  content: "";
+[type='checkbox']:checked + label:before,
+[type='radio']:checked + label:before {
+  content: '';
 
   background: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='3' width='30' height='30' rx='3' fill='white' fill-opacity='0.56'/%3E%3Cpath d='M4 14.7727C4 14.7727 12.3707 21.4901 15.25 27.5C15.25 27.5 22.1264 1.80419 24.5 1' stroke='%236E645F' stroke-width='1.5'/%3E%3C/svg%3E%0A")
     no-repeat;
 }
 
-[type="checkbox"] + label:hover::before,
-[type="radio"] + label:hover::before {
+[type='checkbox'] + label:hover::before,
+[type='radio'] + label:hover::before {
   box-shadow: $shadow-bottom;
+}
+
+.menu-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+
+  & p {
+    white-space: nowrap;
+  }
+
+  & p:not(:last-child) {
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+
+.menu-list__item-line {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px dashed white;
 }
 
 // __________ markup __________

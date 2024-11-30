@@ -1,92 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-            <main class="markup-page">
-                <section class="markup">
-                    <div class="markup__container">
-                        <div class="markup__item">
-                            <h2 class="markup__title">Text</h2>
-                            <div class="text">
-                                <p>text-16 / DM Sans /</p>
-                                <p>Debonaire is natural product-based, hair design & boutique.</p>
-                            </div>
-                            <div class="text text-big">
-                                <p>text-24 / DM Sans /</p>
-                                <p>Cut with Blowout Styling</p>
-                            </div>
-                            <div class="text text-small">
-                                <p>text-14 / DM Sans /</p>
-                                <p>I consent to the collection, processing, and storage of my personal data provided in this form/resume</p>
-                            </div>
-                            <div class="text text-white">
-                                <p>text-white /</p>
-                                <p>Debonaire is natural product-based, hair design & boutique.</p>
-                            </div>
-                            <div class="text text-decor text-white">
-                                <p>text-decor /</p>
-                                <p>Style, made just for you.</p>
-                            </div>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Titles</h2>
-                            <h1 class="title">36px / Hi, we are Debonaire.</h1>
-                            <br>
-                            <h2 class="title title-mid">40px / We’re focused.</h2>
-                            <br>
-                            <h2 class="title title-big">60px / We love what we do. </h2>
-                            <br>
-                            <h3 class="subtitle">30px / We invite you to join our team. </h3>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Colors</h2>
-                            <div class="markup__color-item markup__color-item--1">$color-main: #6E645F</div>
-                            <div class="markup__color-item markup__color-item--2">$color-white: #FFFFFF</div>
-                            <div class="markup__color-item markup__color-item--12">$color-white-light: #FFFFFF8F;</div>
-                            <div class="markup__color-item markup__color-item--11">$color-grey-light: #E2DFDD;</div>
-                            <div class="markup__color-item markup__color-item--9">$color-grey: #ADB6B3;</div>
-                            <div class="markup__color-item markup__color-item--5">$color-green: #C5CEBD</div>
-                            <div class="markup__color-item markup__color-item--8">$color-green-dark: #B9BCAC;</div>
-                            <div class="markup__color-item markup__color-item--7">$color-blue: #C0CFD2;</div>
-                            <div class="markup__color-item markup__color-item--10">$color-blue-dark: #A9BEC2;</div>
-                            <div class="markup__color-item markup__color-item--4">$color-pink: #DFCCC2</div>
-                            <div class="markup__color-item markup__color-item--6">$color-violet: #C2B8CC</div>
-                            <div class="markup__color-item markup__color-item--3">$color-accent: #F95454</div>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Buttons</h2>
-                            <a href="#" class="btn">Book an Appoitment</a>
-                            <a href="#" class="btn btn-big">Apply Now</a>
-                            <button class="trigger">Back to The Page</button>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Checkbox</h2>
-                            <div class="checkbox_box">
-                                <input class="checkbox_input" type="checkbox" id="checkbox_markup">
-                                <label class="checkbox_label" for="checkbox_markup">Label</label>
-                            </div>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Radio</h2>
-                            <div class="radio_box">
-                                <input class="radio_input" type="radio" id="radio_markup">
-                                <label class="radio_label" for="radio_markup">Label</label>
-                            </div>
-                        </div>
-                        <div class="markup__item">
-                            <h2 class="markup__title">Input</h2>
-                                <input class="input" type="text" placeholder="Your Name">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"HomePage" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="markup-page">
+        <section class="markup">
+          <div class="markup__container">
+            <div class="markup__item">
+              <h2 class="markup__title">Text</h2>
+              <div class="text">
+                <p>text-16 / DM Sans /</p>
+                <p>Debonaire is natural product-based, hair design & boutique.</p>
+              </div>
+              <div class="text text-big">
+                <p>text-24 / DM Sans /</p>
+                <p>Cut with Blowout Styling</p>
+              </div>
+              <div class="text text-small">
+                <p>text-14 / DM Sans /</p>
+                <p>I consent to the collection, processing, and storage of my personal data provided in this form/resume</p>
+              </div>
+              <div class="text text-white">
+                <p>text-white /</p>
+                <p>Debonaire is natural product-based, hair design & boutique.</p>
+              </div>
+              <div class="text text-decor text-white">
+                <p>text-decor /</p>
+                <p>Style, made just for you.</p>
+              </div>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Titles</h2>
+              <h1 class="title">36px / Hi, we are Debonaire.</h1>
+              <br />
+              <h2 class="title title-mid">40px / We’re focused.</h2>
+              <br />
+              <h2 class="title title-big">60px / We love what we do.</h2>
+              <br />
+              <h3 class="subtitle">30px / We invite you to join our team.</h3>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Colors</h2>
+              <div class="markup__color-item markup__color-item--1">$color-main: #6E645F</div>
+              <div class="markup__color-item markup__color-item--2">$color-white: #FFFFFF</div>
+              <div class="markup__color-item markup__color-item--12">$color-white-light: #FFFFFF8F;</div>
+              <div class="markup__color-item markup__color-item--11">$color-grey-light: #E2DFDD;</div>
+              <div class="markup__color-item markup__color-item--9">$color-grey: #ADB6B3;</div>
+              <div class="markup__color-item markup__color-item--5">$color-green: #C5CEBD</div>
+              <div class="markup__color-item markup__color-item--8">$color-green-dark: #B9BCAC;</div>
+              <div class="markup__color-item markup__color-item--7">$color-blue: #C0CFD2;</div>
+              <div class="markup__color-item markup__color-item--10">$color-blue-dark: #A9BEC2;</div>
+              <div class="markup__color-item markup__color-item--4">$color-pink: #DFCCC2</div>
+              <div class="markup__color-item markup__color-item--6">$color-violet: #C2B8CC</div>
+              <div class="markup__color-item markup__color-item--3">$color-accent: #F95454</div>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Buttons</h2>
+              <a href="#" class="btn">Book an Appoitment</a>
+              <a href="#" class="btn btn-big">Apply Now</a>
+              <button class="trigger">Back to The Page</button>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Checkbox</h2>
+              <div class="checkbox_box">
+                <input class="checkbox_input" type="checkbox" id="checkbox_markup" />
+                <label class="checkbox_label" for="checkbox_markup">Label</label>
+              </div>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Radio</h2>
+              <div class="radio_box">
+                <input class="radio_input" type="radio" id="radio_markup" />
+                <label class="radio_label" for="radio_markup">Label</label>
+              </div>
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Input</h2>
+              <input class="input" type="text" placeholder="Your Name" />
+            </div>
+            <div class="markup__item">
+              <h2 class="markup__title">Menu</h2>
+              <ul class="text text-big text-white menu-list">
+                <li class="menu-list__item">
+                  <p class="menu-list__item-name">Classic Cut</p>
+                  <span class="menu-list__item-line"></span>
+                  <p class="menu-list__item-price">15$</p>
+                </li>
+                <li class="menu-list__item">
+                  <p class="menu-list__item-name">Layered Trim with Graduated Ends</p>
+                  <span class="menu-list__item-line"></span>
+
+                  <p class="menu-list__item-price">18$</p>
+                </li>
+                <li class="menu-list__item">
+                  <p class="menu-list__item-name">Chic Bob</p>
+                  <span class="menu-list__item-line"></span>
+
+                  <p class="menu-list__item-price">22$</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>
