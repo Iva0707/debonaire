@@ -1396,7 +1396,6 @@ body {
     }
 
     // .services-creating__row
-
     &__row {
       display: grid;
       grid-template-columns: 33% 21% 1fr;
@@ -1431,7 +1430,6 @@ body {
     }
 
     // .services-creating__column-photo
-
     &__column-photo {
       position: relative;
 
@@ -1441,7 +1439,6 @@ body {
     }
 
     // .services-creating__image-main
-
     &__image-main {
       width: 100%;
       height: auto;
@@ -1457,7 +1454,6 @@ body {
     }
 
     // .services-creating__deco-main
-
     &__deco-main {
       position: absolute;
       right: -24%;
@@ -1479,7 +1475,6 @@ body {
     }
 
     // .services-creating__column-content
-
     &__column-content {
       display: flex;
       justify-content: flex-end;
@@ -1502,7 +1497,6 @@ body {
     }
 
     // .services-creating__title
-
     &__title {
       z-index: 1;
 
@@ -1516,13 +1510,7 @@ body {
       }
     }
 
-    // .services-creating__text
-
-    &__text {
-    }
-
     // .services-creating__column-deco
-
     &__column-deco {
       position: relative;
 
@@ -1534,7 +1522,6 @@ body {
     }
 
     // .services-creating__text-deco
-
     &__text-deco {
       position: absolute;
       top: 6.5%;
@@ -1555,7 +1542,6 @@ body {
     }
 
     // .services-creating__image-deco
-
     &__image-deco {
       position: absolute;
       right: -32%;
@@ -1581,7 +1567,6 @@ body {
     }
 
     // .services-creating__image-round
-
     &__image-round {
       position: absolute;
       right: -7%;
@@ -1608,6 +1593,159 @@ body {
         min-width: toRem(150);
         bottom: -18%;
       }
+    }
+  }
+
+  // ============================================================================================================================================================================================================================================================================================================================================================================================
+  .services-cut {
+    position: relative;
+
+    padding: toRem(160) 0;
+
+    background-color: $color-blue;
+
+    @include adaptiveValue('padding-top', 160, 60);
+    @include adaptiveValue('padding-bottom', 160, 60);
+
+    // .services-cut__container
+
+    &__container {
+      position: relative;
+
+      max-width: toRem(1212);
+    }
+
+    // .services-cut__row
+
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: toRem(20);
+
+      padding-left: toRem(64);
+      margin-left: auto;
+      width: 100%;
+      height: 100%;
+      max-width: toRem(1170);
+
+      @include adaptiveValue('padding-left', 64, 20);
+    }
+
+    // .services-cut__list-wrapper
+
+    &__list-wrapper {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    // .services-cut__list
+
+    &__list {
+      justify-self: center;
+
+      min-width: toRem(546);
+
+      @include adaptiveValue('min-width', 546, 400);
+    }
+
+    // .services-cut__list-item
+
+    &__list-item {
+    }
+
+    // .services-cut__list-name
+
+    &__list-name {
+    }
+
+    // .services-cut__item-line
+
+    &__item-line {
+    }
+
+    // .services-cut__list-price
+
+    &__list-price {
+    }
+
+    // .services-cut__photo
+
+    // .services-cut__button
+
+    &__button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__photo {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // .services-cut__photo-item
+
+    &__photo-item {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+
+      aspect-ratio: 355 / 627;
+    }
+
+    // .services-cut__photo-deco
+
+    &__photo-deco {
+      position: absolute;
+      bottom: -10%;
+      left: -20%;
+      z-index: 0;
+
+      aspect-ratio: 148 / 160;
+
+      & img {
+        width: 100%;
+        max-width: toRem(148);
+      }
+    }
+
+    // .services-cut__deco-text
+
+    &__deco-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      white-space: nowrap;
+
+      transform: translate(0, -50%) rotate(180deg);
+
+      & p {
+      }
+    }
+
+    // .services-cut__svg
+
+    &__svg {
+    }
+
+    // .services-cut__svg-item
+
+    &__svg-item {
+      position: absolute;
+      top: -18%;
+      right: -15%;
+      z-index: 1;
+
+      transform: rotate(27deg);
     }
   }
 }
