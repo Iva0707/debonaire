@@ -4,6 +4,7 @@ module.exports = {
   tabWidth: 2,
   semi: true,
   arrowParens: 'always',
-  printWidth: 120,
+  printWidth: 200,
   singleAttributePerLine: false,
+  htmlWhitespaceSensitivity: 'ignore',
 };

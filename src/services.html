@@ -27,14 +27,24 @@
 
         <section data-watch class="services-creating">
           <div class="services-creating__container">
-            <div class="services-creating__row">
+            <div data-prlx-parent class="services-creating__row">
               <div class="services-creating__column-photo">
-                <img class="services-creating__image-main" src="@img/services-creating/image-1.jpg" alt="Photo" />
-                <img class="services-creating__deco-main" src="@img/services-creating/deco-1.svg" alt="Deco" />
+                <img
+                  data-prlx
+                  data-coefficient="2"
+                  class="services-creating__image-main"
+                  src="@img/services-creating/image-1.jpg"
+                  alt="Photo"
+                />
+                <div data-prlx data-coefficient="2" class="services-creating__deco-main">
+                  <img src="@img/services-creating/deco-1.svg" alt="Deco" />
+                </div>
               </div>
               <div class="services-creating__column-content">
-                <h2 class="title title-big services-creating__title">Creating art with your hair.</h2>
-                <div class="text services-creating__text">
+                <h2 data-prlx data-coefficient="4" class="title title-big services-creating__title">
+                  Creating art with your hair.
+                </h2>
+                <div data-prlx class="text services-creating__text">
                   <p>
                     We craft personalized styles that reflect your personality and lifestyle. Our services are more than
                     just hair care.
@@ -46,11 +56,23 @@
                 </div>
               </div>
               <div class="services-creating__column-deco">
-                <div class="text text-decor text-white services-creating__text-deco">
+                <div data-prlx data-coefficient="4" class="text text-decor text-white services-creating__text-deco">
                   <p>Style, made just for you.</p>
                 </div>
-                <img class="services-creating__image-deco" src="@img/services-creating/image-2.jpg" alt="Deco" />
-                <img class="services-creating__image-round" src="@img/services-creating/deco-2.jpg" alt="Photo" />
+                <img
+                  data-prlx
+                  data-coefficient="2"
+                  class="services-creating__image-deco"
+                  src="@img/services-creating/image-2.jpg"
+                  alt="Deco"
+                />
+                <img
+                  data-prlx
+                  data-coefficient="4"
+                  class="services-creating__image-round"
+                  src="@img/services-creating/deco-2.jpg"
+                  alt="Photo"
+                />
               </div>
             </div>
           </div>

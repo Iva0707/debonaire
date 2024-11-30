@@ -1380,6 +1380,14 @@ body {
     @include adaptiveValue('padding-top', 200, 60);
     @include adaptiveValue('padding-bottom', 200, 60);
 
+    &._watcher-view {
+      & .services-creating__deco-main img {
+        transform: rotate(72.2deg) scale(1);
+
+        transition: all 1s 1s;
+      }
+    }
+
     // .services-creating__container
     &__container {
       @media (max-width: $tablet) {
@@ -1406,10 +1414,19 @@ body {
           'photo photo'
           'content deco';
         grid-template-columns: 1fr 20%;
-        grid-template-rows: repeat(1, auto);
-        row-gap: 60px;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 80px;
 
-        @include adaptiveValue('row-gap', 60, 20);
+        @include adaptiveValue('row-gap', 80, 20);
+      }
+
+      @media (max-width: $mobileSmall) {
+        grid-template-areas:
+          'photo'
+          'content';
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
       }
     }
 
@@ -1449,12 +1466,15 @@ body {
 
       width: 100%;
       max-width: 223px;
-
-      transform: rotate(72.2deg);
+      
+      & img {
+        transform: rotate(0deg) scale(0);
+      }
 
       @media (max-width: $tablet) {
-        top: -9%;
-        left: -11%;
+        top: -8%;
+        left: calc(50% - 100px);
+        width: 30%;
       }
     }
 
@@ -1477,6 +1497,7 @@ body {
         align-items: flex-start;
 
         grid-area: content;
+        padding-bottom: 0;
       }
     }
 
@@ -1491,6 +1512,7 @@ body {
 
       @media (max-width: $tablet) {
         margin: 0;
+        min-width: 100%;
       }
     }
 
@@ -1548,7 +1570,13 @@ body {
 
       @media (max-width: $tablet) {
         bottom: 0;
-        right: 0;
+        right: -5px;
+
+        @include adaptiveValue('right', -5, -50, 0, 767.98, 479.98);
+      }
+
+      @media (max-width: $mobileSmall) {
+        display: none;
       }
     }
 
@@ -1561,6 +1589,7 @@ body {
 
       width: 100%;
       max-width: 341px;
+      min-width: 110px;
 
       border: 2px solid $color-white;
       border-radius: 50%;
@@ -1570,8 +1599,14 @@ body {
       @include adaptiveValue('max-width', 341, 60);
 
       @media (max-width: $tablet) {
-        bottom: 0;
+        bottom: -12%;
+        right: 3%;
+      }
+
+      @media (max-width: $mobileSmall) {
         right: 0;
+        min-width: 150px;
+        bottom: -20%;
       }
     }
   }
