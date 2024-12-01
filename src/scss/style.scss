@@ -1571,6 +1571,7 @@ body {
       position: absolute;
       right: -7%;
       bottom: -19%;
+      z-index: 1;
 
       width: 100%;
       max-width: toRem(341);
@@ -1600,19 +1601,23 @@ body {
   .services-cut {
     position: relative;
 
-    padding: toRem(160) 0;
+    padding: toRem(120) 0;
 
     background-color: $color-blue;
 
-    @include adaptiveValue('padding-top', 160, 60);
-    @include adaptiveValue('padding-bottom', 160, 60);
+    @include adaptiveValue('padding-top', 120, 40);
+    @include adaptiveValue('padding-bottom', 120, 40);
 
     // .services-cut__container
 
     &__container {
       position: relative;
 
-      max-width: toRem(1212);
+      max-width: toRem(1306);
+
+      @media (min-width: 992px) {
+        padding-right: 8px;
+      }
     }
 
     // .services-cut__row
@@ -1622,13 +1627,21 @@ body {
       grid-template-columns: repeat(2, auto);
       column-gap: toRem(20);
 
-      padding-left: toRem(64);
+      padding-left: toRem(80);
       margin-left: auto;
       width: 100%;
       height: 100%;
       max-width: toRem(1170);
 
-      @include adaptiveValue('padding-left', 64, 20);
+      @include adaptiveValue('padding-left', 80, 20, 0, $containerWidth, 767);
+
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 100px;
+        padding-left: 0;
+
+        @include adaptiveValue('row-gap', 100, 80);
+      }
     }
 
     // .services-cut__list-wrapper
@@ -1640,16 +1653,27 @@ body {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+
+      @media (max-width: $tablet) {
+        order: 2;
+      }
     }
 
     // .services-cut__list
 
     &__list {
-      justify-self: center;
+      // justify-self: center;
 
       min-width: toRem(546);
 
       @include adaptiveValue('min-width', 546, 400);
+
+      @media (max-width: $tablet) {
+        min-width: 100%;
+        margin-bottom: 100px;
+
+        @include adaptiveValue('margin-bottom', 100, 80);
+      }
     }
 
     // .services-cut__list-item
@@ -1680,14 +1704,22 @@ body {
       position: absolute;
       bottom: 0;
       left: 0;
+
+      @media (max-width: $tablet) {
+        position: relative;
+      }
     }
 
     &__photo {
       position: relative;
 
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+
+      @media (max-width: $tablet) {
+        order: 1;
+      }
     }
 
     // .services-cut__photo-item
@@ -1697,19 +1729,33 @@ body {
       z-index: 1;
 
       width: 100%;
+      max-width: 355px;
 
       aspect-ratio: 355 / 627;
+
+      @media (max-width: $mobileSmall) {
+        max-width: 100%;
+      }
     }
 
     // .services-cut__photo-deco
 
     &__photo-deco {
       position: absolute;
-      bottom: -10%;
-      left: -20%;
+      bottom: -6%;
+      left: -11%;
       z-index: 0;
 
       aspect-ratio: 148 / 160;
+
+      @media (max-width: $tablet) {
+        left: unset;
+        right: 305px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        display: none;
+      }
 
       & img {
         width: 100%;
@@ -1722,30 +1768,220 @@ body {
     &__deco-text {
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 4px;
+      z-index: 1;
 
       white-space: nowrap;
 
-      transform: translate(0, -50%) rotate(180deg);
+      @media (max-width: $tablet) {
+        top: 0;
+      }
+
+      @media (max-width: $mobileSmall) {
+        left: 20px;
+      }
 
       & p {
+        transform: translate(0, -50%) rotate(180deg);
+
+        @media (max-width: $tablet) {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  // ============================================================================================================================================================================================================================================================================================================================================================================================
+  .services-color {
+    // .services-color__container
+
+    position: relative;
+
+    padding: toRem(120) 0;
+
+    background-color: $color-green-dark;
+
+    @include adaptiveValue('padding-top', 120, 40);
+    @include adaptiveValue('padding-bottom', 120, 40);
+
+    &__container {
+      position: relative;
+
+      max-width: toRem(1306);
+
+      @media (min-width: 992px) {
+        padding-left: 8px;
       }
     }
 
-    // .services-cut__svg
+    // .services-color__row
 
-    &__svg {
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: toRem(20);
+
+      padding-right: toRem(80);
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      max-width: toRem(1170);
+
+      @include adaptiveValue('padding-right', 80, 20, 0, $containerWidth, 767);
+
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 100px;
+        padding-right: 0;
+
+        @include adaptiveValue('row-gap', 100, 80);
+      }
     }
 
-    // .services-cut__svg-item
+    // .services-color__list-wrapper
 
-    &__svg-item {
+    &__list-wrapper {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      order: 2;
+    }
+
+    // .services-color__list
+
+    &__list {
+      min-width: toRem(546);
+
+      @include adaptiveValue('min-width', 546, 400);
+
+      @media (max-width: $tablet) {
+        min-width: 100%;
+        margin-bottom: 100px;
+
+        @include adaptiveValue('margin-bottom', 100, 80);
+      }
+    }
+
+    // .services-color__list-item
+
+    &__list-item {
+    }
+
+    // .services-color__list-name
+
+    &__list-name {
+    }
+
+    // .services-color__item-line
+
+    &__item-line {
+    }
+
+    // .services-color__list-price
+
+    &__list-price {
+    }
+
+    // .services-color__button
+
+    &__button {
       position: absolute;
-      top: -18%;
-      right: -15%;
+      bottom: 0;
+      left: 0;
+
+      @media (max-width: $tablet) {
+        position: relative;
+      }
+    }
+
+    // .services-color__photo
+
+    &__photo {
+      position: relative;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      order: 1;
+    }
+
+    // .services-color__photo-item
+
+    &__photo-item {
+      position: relative;
       z-index: 1;
 
-      transform: rotate(27deg);
+      width: 100%;
+      max-width: 355px;
+
+      aspect-ratio: 355 / 627;
+
+      @media (max-width: $mobileSmall) {
+        max-width: 100%;
+      }
+    }
+
+    // .services-color__photo-deco
+
+    &__photo-deco {
+      position: absolute;
+      bottom: -40%;
+      right: -11%;
+      z-index: 3;
+
+      border-radius: 50%;
+      overflow: hidden;
+
+      aspect-ratio: 1;
+
+      @media (max-width: $tablet) {
+        bottom: -15%;
+      }
+
+      @media (max-width: $mobileSmall) {
+        display: none;
+      }
+
+      & img {
+        width: 100%;
+        max-width: toRem(314);
+        
+        @media (max-width: $tablet) {
+          max-width: toRem(240);
+        }
+      }
+    }
+
+    // .services-color__deco-text
+
+    &__deco-text {
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      z-index: 1;
+
+      white-space: nowrap;
+
+      @media (max-width: $tablet) {
+        top: 0;
+      }
+
+      @media (max-width: $mobileSmall) {
+        right: 20px;
+      }
+
+      & p {
+        transform: translate(0, -50%);
+
+        @media (max-width: $tablet) {
+          transform: none;
+        }
+      }
     }
   }
 }
